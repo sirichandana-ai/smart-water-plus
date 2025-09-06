@@ -210,5 +210,14 @@ __marimo__/
 venv/
 __pycache__/
 *.pyc
+
+# Simulation outputs
 simulation/data/
 simulation/logs/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
