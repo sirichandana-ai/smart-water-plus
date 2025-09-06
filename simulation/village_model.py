@@ -110,6 +110,31 @@ for c in range(1, CONFIG["num_clusters"] + 1):
 logging.info("✅ Network built (1 tank → %d clusters → %d houses)",
              CONFIG["num_clusters"], CONFIG["num_clusters"] * CONFIG["houses_per_cluster"])
 
+
+# -----------------------
+# 2b) EXPORT NETWORK FILES
+# -----------------------
+inp_path = "simulation/village_model.inp"
+json_path = "simulation/village_model.json"
+
+# INP export (supports old & new WNTR versions)
+try:
+    wn.write_inpfile(inp_path)
+except AttributeError:
+    from wntr.network.io import write_inpfile
+    write_inpfile(wn, inp_path)
+
+# JSON export (supports old & new WNTR versions)
+try:
+    wn.write_json(json_path)
+except AttributeError:
+    from wntr.network.io import write_json
+    write_json(wn, json_path)
+
+logging.info("📂 Network exported to %s and %s", inp_path, json_path)
+
+
+
 # -----------------------
 # 3) RUN SIMULATION
 # -----------------------
