@@ -1,0 +1,9 @@
+Smart Water Plus – Simulation Summary
+
+Clusters: 10
+Houses per cluster: 5
+Total houses: 50
+Cluster flow anomaly ratio: 1.3x mean (min 0.0001 m³/s)
+Low pressure threshold: 10.0 m
+
+Anomalies: 0 (no alerts)
