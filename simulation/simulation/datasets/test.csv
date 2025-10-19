@@ -1,2 +1,0 @@
-timestamp,pressure,flow,rolling_mean,delta,pressure_lag_1,flow_lag_1,pressure_lag_2,flow_lag_2,pressure_lag_3,flow_lag_3,pressure_lag_4,flow_lag_4,pressure_lag_5,flow_lag_5,pressure_lag_6,flow_lag_6,pressure_lag_7,flow_lag_7,pressure_lag_8,flow_lag_8,pressure_lag_9,flow_lag_9,pressure_lag_10,flow_lag_10,pressure_min,pressure_max,pressure_std,flow_min,flow_max,flow_std,leak
-2025-09-06 00:02:00,0.0,0.0,0.0,0.0,,0.0,,0.0,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0

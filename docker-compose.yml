@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: smartwater-frontend
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: smartwater-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+      - DB_NAME=test_database
+      - CORS_ORIGINS=*
+
+  mongo:
+    image: mongo:6.0
+    container_name: smartwater-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
